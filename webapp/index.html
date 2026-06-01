@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EV Routing Engine — Interactive route planner with Mapbox visualization for electric vehicles in New Delhi">
+  <title>EV Routing Engine — Route Planner</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
+</head>
+<body>
+  <!-- Token Modal -->
+  <div id="token-modal">
+    <div class="modal-box">
+      <h2>🗺️ Mapbox Token</h2>
+      <p>Enter your Mapbox access token to load the map. You can get a free token from the Mapbox dashboard.</p>
+      <input type="text" id="token-input" placeholder="pk.eyJ1Ijo..." spellcheck="false">
+      <p class="modal-hint"><a href="https://account.mapbox.com/access-tokens/" target="_blank">Get a free token →</a></p>
+      <button class="btn-primary" id="token-submit">Launch Map</button>
+    </div>
+  </div>
+
+  <div id="app">
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <h1><span class="icon-bolt">⚡</span> EV Route Engine</h1>
+        <div class="subtitle">Mahindra BE 6 · 55.3 kWh · New Delhi</div>
+        <div style="margin-top:8px;">
+          <span id="health-badge" class="offline"><span class="dot"></span>Checking...</span>
+        </div>
+      </div>
+      <div class="sidebar-scroll">
+        <!-- Locations -->
+        <div class="section">
+          <div class="section-title">Route Points</div>
+          <div class="location-input" id="origin-box">
+            <span class="marker-dot origin"></span>
+            <span class="loc-text" id="origin-text">Click map to set origin</span>
+            <button class="clear-btn" id="clear-origin" title="Clear">✕</button>
+          </div>
+          <div class="location-input" id="dest-box">
+            <span class="marker-dot destination"></span>
+            <span class="loc-text" id="dest-text">Click map to set destination</span>
+            <button class="clear-btn" id="clear-dest" title="Clear">✕</button>
+          </div>
+        </div>
+
+        <!-- Presets -->
+        <div class="section">
+          <div class="section-title">Quick Routes</div>
+          <div class="preset-grid" id="preset-grid"></div>
+        </div>
+
+        <!-- Mode -->
+        <div class="section">
+          <div class="section-title">Routing Mode</div>
+          <div class="mode-toggle">
+            <button class="mode-btn active" data-mode="recommend">Single Route</button>
+            <button class="mode-btn" data-mode="plan">Multi-Stop</button>
+          </div>
+        </div>
+
+        <!-- SOC Slider -->
+        <div class="section">
+          <div class="section-title">Vehicle Parameters</div>
+          <div class="control-group">
+            <div class="control-label">Starting SOC <span class="control-value" id="soc-val">80%</span></div>
+            <input type="range" id="soc-slider" min="15" max="100" value="80" step="1">
+          </div>
+          <div class="control-group">
+            <div class="control-label">Protection SOC <span class="control-value" id="prot-val">15%</span></div>
+            <input type="range" id="prot-slider" min="5" max="25" value="15" step="1">
+          </div>
+          <div class="control-group">
+            <div class="control-label">Temperature <span class="control-value" id="temp-val">25°C</span></div>
+            <input type="range" id="temp-slider" min="-25" max="50" value="25" step="1">
+          </div>
+        </div>
+
+        <!-- Calculate Button -->
+        <div class="section">
+          <button class="btn-primary" id="calc-btn" disabled>Calculate Route</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Map -->
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="map-instructions"><span>Click</span> on the map to set origin, then destination</div>
+      <div id="toast"></div>
+      <div id="results-panel"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

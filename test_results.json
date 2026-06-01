@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-05-31T23:39:58.617035",
+  "results": [
+    {
+      "test": "Dwarka -> Saket (med)",
+      "status": 200,
+      "ms": 2649,
+      "edges": 178,
+      "final_soc": 0.794122,
+      "soc_drop_pp": 0.587800000000005,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "India Gate -> Qutub Minar",
+      "status": 200,
+      "ms": 1553,
+      "edges": 140,
+      "final_soc": 0.790549,
+      "soc_drop_pp": 0.9451000000000098,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "CP -> IGI Airport T3",
+      "status": 200,
+      "ms": 1308,
+      "edges": 167,
+      "final_soc": 0.752635,
+      "soc_drop_pp": 4.7364999999999995,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "Red Fort -> Lotus Temple",
+      "status": 200,
+      "ms": 1265,
+      "edges": 146,
+      "final_soc": 0.767801,
+      "soc_drop_pp": 3.219900000000009,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "Rohini -> Greater Kailash",
+      "status": 200,
+      "ms": 2045,
+      "edges": 280,
+      "final_soc": 0.728476,
+      "soc_drop_pp": 7.152400000000004,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "Dwarka -> Noida Sec 18 (long)",
+      "status": 200,
+      "ms": 1581,
+      "edges": 248,
+      "final_soc": 0.794122,
+      "soc_drop_pp": 0.587800000000005,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "Narela -> Mehrauli (cross-city)",
+      "status": 200,
+      "ms": 1469,
+      "edges": 193,
+      "final_soc": 0.686859,
+      "soc_drop_pp": 11.314100000000005,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    },
+    {
+      "test": "Short: CP circle",
+      "status": 200,
+      "ms": 491,
+      "edges": 25,
+      "final_soc": 0.797048,
+      "soc_drop_pp": 0.29520000000000657,
+      "chargers": 5,
+      "depletion": "none",
+      "endpoint": "recommend"
+    }
+  ]
+}

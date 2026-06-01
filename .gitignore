@@ -1,0 +1,21 @@
+# Temporary probe files
+_probe.py
+_probe_out.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Data dumps
+*.json
+!test_results.json
+
+# CSV
+*.csv
+
+# OS
+.DS_Store
+Thumbs.db
